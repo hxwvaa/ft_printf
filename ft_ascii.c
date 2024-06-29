@@ -12,6 +12,8 @@ int	ft_strlen(const char *s)
 
 int	ft_putstr(char *s)
 {
+	if (!s)
+		s = "(null)";
 	write(1, s, ft_strlen(s));
 	return (ft_strlen(s));
 }

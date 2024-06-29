@@ -8,17 +8,17 @@ int	check(va_list args, const char c)
 	len = 0;
 	if (c == 'c')
 		len += ft_putchar(va_arg(args, int));
-	if (c == 's')
+	else if (c == 's')
 		len += ft_putstr(va_arg(args, char *));
-	if (c == 'd' || c == 'i')
+	else if (c == 'd' || c == 'i')
 		len += ft_putnbr(va_arg(args, int));
-	if (c == 'p')
+	else if (c == 'p')
 		len += ft_putptr(va_arg(args, void *));
-	if (c == 'u')
+	else if (c == 'u')
 		len += ft_putunbr(va_arg(args, unsigned int));
-	if (c == 'x' || c == 'X')
+	else if (c == 'x' || c == 'X')
 		len += ft_puthexa(va_arg(args, unsigned int), c);
-	if (c == '%')
+	else if (c == '%')
 		len += ft_putchar('%');
 	return (len);
 }
@@ -32,7 +32,7 @@ int	ft_printf(const char *format, ...)
 	i = 0;
 	len = 0;
 	va_start(args, format);
-	while (format[i] != '\0')
+	while (format[i])
 	{
 		if (format[i] == '%')
 		{
