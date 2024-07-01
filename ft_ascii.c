@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ascii.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hbasheer <hbasheer@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/01 12:46:28 by hbasheer          #+#    #+#             */
+/*   Updated: 2024/07/01 12:46:29 by hbasheer         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 
@@ -10,16 +22,14 @@ int	ft_strlen(const char *s)
 	return (i);
 }
 
-int	ft_putstr(char *s)
+ssize_t	ft_putstr(char *s)
 {
 	if (!s)
 		s = "(null)";
-	write(1, s, ft_strlen(s));
-	return (ft_strlen(s));
+	return (write(1, s, ft_strlen(s)));
 }
 
-int	ft_putchar(char c)
+ssize_t	ft_putchar(char c)
 {
-	write(1, &c, 1);
-	return (1);
+	return (write(1, &c, 1));
 }

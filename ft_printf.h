@@ -1,14 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hbasheer <hbasheer@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/01 12:46:24 by hbasheer          #+#    #+#             */
+/*   Updated: 2024/07/01 12:46:25 by hbasheer         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
 # include <stdarg.h>
 # include <unistd.h>
 
-int	ft_printf(const char *format, ...);
-int	ft_putchar(char c);
-int	ft_puthexa(unsigned long long n, char c);
-int	ft_putnbr(int n);
-int	ft_putptr(void *ptr);
-int	ft_putstr(char *s);
-int	ft_putunbr(unsigned int n);
+ssize_t	ft_printf(const char *format, ...);
+ssize_t	ft_putchar(char c);
+ssize_t	ft_puthexa(unsigned long long n, char c);
+ssize_t	ft_putnbr(int n);
+ssize_t	ft_putptr(void *ptr);
+ssize_t	ft_putstr(char *s);
+ssize_t	ft_putunbr(unsigned int n);
+
 #endif
