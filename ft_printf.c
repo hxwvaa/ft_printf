@@ -6,12 +6,11 @@
 /*   By: hbasheer <hbasheer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 12:46:22 by hbasheer          #+#    #+#             */
-/*   Updated: 2024/07/01 12:46:23 by hbasheer         ###   ########.fr       */
+/*   Updated: 2024/07/01 12:56:23 by hbasheer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 ssize_t	check(va_list args, const char c)
 {
